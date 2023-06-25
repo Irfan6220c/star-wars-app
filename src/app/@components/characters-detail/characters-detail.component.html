@@ -1,0 +1,33 @@
+<mat-card *ngIf="character">
+  <mat-card-header>
+    <mat-card-title fxLayout="row" fxLayoutAlign="start center">
+      <mat-icon>person</mat-icon>&nbsp;{{ character.result.properties.name }} Details
+    </mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div fxLayout="column" fxLayoutGap="15px">
+      <mat-list>
+        <mat-list-item><mat-icon>badge</mat-icon>&nbsp;<strong>ID:</strong> {{ character.result._id }}</mat-list-item>
+        <mat-list-item><mat-icon>face</mat-icon>&nbsp;<strong>Name:</strong> {{ character.result.properties.name }}</mat-list-item>
+        <mat-list-item><mat-icon>height</mat-icon>&nbsp;<strong>Height:</strong> {{ character.result.properties.height }}</mat-list-item>
+        <mat-list-item><mat-icon>fitness_center</mat-icon>&nbsp;<strong>Mass:</strong> {{ character.result.properties.mass }}</mat-list-item>
+        <mat-list-item><mat-icon>style</mat-icon>&nbsp;<strong>Hair Color:</strong> {{ character.result.properties.hair_color }}</mat-list-item>
+        <mat-list-item><mat-icon>color_lens</mat-icon>&nbsp;<strong>Skin Color:</strong> {{ character.result.properties.skin_color }}</mat-list-item>
+        <mat-list-item><mat-icon>visibility</mat-icon>&nbsp;<strong>Eye Color:</strong> {{ character.result.properties.eye_color }}</mat-list-item>
+        <mat-list-item><mat-icon>cake</mat-icon>&nbsp;<strong>Birth Year:</strong> {{ character.result.properties.birth_year }}</mat-list-item>
+        <mat-list-item><mat-icon>wc</mat-icon>&nbsp;<strong>Gender:</strong> {{ character.result.properties.gender }}</mat-list-item>
+        <mat-list-item><mat-icon>calendar_today</mat-icon>&nbsp;<strong>Created:</strong> {{ character.result.properties.created | date }}</mat-list-item>
+        <mat-list-item><mat-icon>edit</mat-icon>&nbsp;<strong>Edited:</strong> {{ character.result.properties.edited | date }}</mat-list-item>
+        <mat-list-item>
+          <mat-icon>public</mat-icon>&nbsp;<strong>Homeworld:</strong>
+          <a mat-button color="accent" [routerLink]="['/planet-detail', character.result.uid]">Go to Planet</a>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="goBack()"><mat-icon>arrow_back</mat-icon> Back to Characters List</button>
+  </mat-card-actions>
+</mat-card>

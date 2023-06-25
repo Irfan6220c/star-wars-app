@@ -1,0 +1,31 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.character-item {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.paginator {
+  float: right;
+}
+
+mat-list-item {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+
+}
+
+mat-list-item:hover{
+  cursor: pointer;
+}
+
+.list-number {
+  margin-right: 10px;
+}

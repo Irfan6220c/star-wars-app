@@ -1,0 +1,26 @@
+<div class="container" *ngIf="planet">
+  <mat-card class="mat-elevation-z5">
+    <mat-card-header>
+      <div mat-card-avatar class="planet-icon">
+        <mat-icon>public</mat-icon>
+      </div>
+      <mat-card-title>{{ planet.result.name }}</mat-card-title>
+      <mat-card-subtitle>Planet Details</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <p><mat-icon>filter_vintage</mat-icon><strong> Climate:</strong> {{ planet.result.properties.climate }}</p>
+      <p><mat-icon>360</mat-icon><strong> Diameter:</strong> {{ planet.result.properties.diameter }}</p>
+      <p><mat-icon>gravity_on</mat-icon><strong> Gravity:</strong> {{ planet.result.properties.gravity }}</p>
+      <p><mat-icon>terrain</mat-icon><strong> Terrain:</strong> {{ planet.result.properties.terrain }}</p>
+      <p><mat-icon>water</mat-icon><strong> Surface Water:</strong> {{ planet.result.properties.surface_water }}</p>
+      <p><mat-icon>groups</mat-icon><strong> Population:</strong> {{ planet.result.properties.population }}</p>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" [routerLink]="['/character-details', characterId]">
+        <mat-icon>arrow_back</mat-icon>Back
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
