@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router, RouterOutlet } from '@angular/router';
-import { LoaderComponent } from './@components/loader/loader.component';
+import { LoaderComponent } from './containers/loader/loader.component';
 import { PageService } from './services/page.service';
 
 @Component({
